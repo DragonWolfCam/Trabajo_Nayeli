@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    color: #0f0f0f; /* Cambiado a un tono de gris medio para mejorar la legibilidad */
-    background: linear-gradient(200deg, #aaa4a7, #b651a0c0); 
-    background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
+    color: #0f0f0f;
+    background: linear-gradient(200deg, #aaa4a7, #b651a0c0);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 section {
@@ -13,20 +21,20 @@ section {
 }
 
 .contenedor {
-    width: calc(50% - 2rem); /* Ancho de la mitad de la página menos el padding */
-    margin: 0 1rem; /* Margen para separar los contenedores */
+    width: calc(50% - 2rem);
+    margin: 0 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to right, #76628d, #474fb9); /* Degradado de colores naranja */
+    background: linear-gradient(to right, #76628d, #474fb9);
     box-shadow: 0 2px 4px rgb(110, 107, 107);
     border-radius: 10px;
 }
 
 h2 {
     font-size: 2rem;
-    color: #122172; /* Texto en color gris oscuro */
+    color: #122172;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -46,8 +54,8 @@ h2 {
     outline: none;
     font-size: 1rem;
     padding: 5px 0;
-    color: #f7f2f2; /* Texto en un tono de gris oscuro */
-    border-bottom: 1px solid #1a0a5f; /* Línea inferior en un tono de gris más claro */
+    color: #f7f2f2;
+    border-bottom: 1px solid #1a0a5f;
 }
 
 .input-contenedor input:focus ~ label,
@@ -55,14 +63,14 @@ h2 {
 .input-contenedor select:focus ~ label,
 .input-contenedor select:valid ~ label {
     transform: translateY(-150%) scale(0.8);
-    color: #080808; /* Cambiado a texto gris oscuro cuando el input está enfocado o tiene contenido */
+    color: #080808;
 }
 
 .input-contenedor label {
     position: absolute;
     top: 0;
     left: 0;
-    color: #eef0ee; /* Texto en un tono de gris medio */
+    color: #eef0ee;
     font-size: 0.8rem;
     transform-origin: left;
     transition: all 0.3s ease;
@@ -75,10 +83,10 @@ h2 {
 }
 
 button {
-    width: 200px; /* Ancho reducido para centrarlo */
+    width: 200px;
     height: 45px;
     border-radius: 40px;
-    background: linear-gradient(to right, #1fec3a, #104401); /* Degradado de colores naranja */
+    background: linear-gradient(to right, #1fec3a, #104401);
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -86,4 +94,30 @@ button {
     font-size: 1rem;
     color: #fff;
     margin-top: 1rem;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-contenedor input,
+    .input-contenedor select {
+        font-size: 0.9rem;
+    }
+
+    .input-contenedor label {
+        font-size: 0.7rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
 }

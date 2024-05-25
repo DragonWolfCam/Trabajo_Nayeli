@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #0f0f0f;
     background: linear-gradient(200deg, #aaa4a7, #b651a0c0);
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 section {
@@ -26,13 +34,11 @@ section {
 
 h2 {
     font-size: 2.5rem;
-    margin: 20%;
-    width: 75%;
-    height: auto;
-    margin-top: auto;
     color: #122172;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 0;
+    width: 100%;
 }
 
 .input-contenedor {
@@ -64,19 +70,20 @@ h2 {
 
 .input-contenedor label {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 0;
     color: #eef0ee;
-    font-size: 2rem;
+    font-size: 1rem;
     transform-origin: left;
     transition: all 0.3s ease;
+    transform: translateY(-50%);
 }
 
 .button-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 1rem;
 }
 
 button {
@@ -88,56 +95,60 @@ button {
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    font-size: 40px;
+    font-size: 1.5rem;
     color: #fff;
-    margin-top: .5rem;
-    position: static;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.button-container p {
+    color: #0f0f0f;
+}
+
+.button-container a {
+    color: #fdfcfc;
+    text-decoration: none;
+}
+
+.button-container a:hover {
+    color: #b80606;
 }
 
 /* Modificaciones para el campo de correo electrónico */
 .input-contenedor.correo {
-    width: calc(100% - 100%);
     margin-bottom: 2.5rem;
-    position: relative;
 }
 
 .input-contenedor.correo input {
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: auto;
-    padding: 5px 0;
-    color: #f7f2f2;
-    border-bottom: 1px solid #1a0a5f;
-}
-
-.input-contenedor.correo input:focus ~ label,
-.input-contenedor.correo input:valid ~ label {
-    transform: translateY(-150%) scale(0.8);
-    color: #080808;
+    font-size: 1.5rem;
 }
 
 .input-contenedor.correo label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    color: #eef0ee;
-    font-size: auto;
-    width: 100%;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.button-container p {
-    color: #0f0f0f;
-}
-.button-container a {
-    color: #fdfcfc;
-    
+    font-size: 1rem;
 }
 
-.button-container a:hover {
-    color: #b80606; /* Cambio de color al pasar el cursor */
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .input-contenedor input,
+    .input-contenedor select {
+        font-size: 1.2rem;
+    }
+
+    .input-contenedor label {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
 }

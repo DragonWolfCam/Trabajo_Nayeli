@@ -23,13 +23,14 @@ body {
     width: 80%;
     max-width: 1200px;
     justify-content: space-between;
+    flex-wrap: wrap; /* Añadido para permitir el ajuste de contenido en pantallas pequeñas */
 }
 
 .contenedor {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Cambio para apilar secciones verticalmente en pantallas pequeñas */
     border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     backdrop-filter: blur(15px);
@@ -39,14 +40,15 @@ body {
 }
 
 .left-section, .right-section {
-    width: 48%;
+    width: 100%; /* Ajuste para que ocupen el 100% en pantallas pequeñas */
+    margin-bottom: 1rem; /* Añadido margen inferior para separación */
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #8b4513;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: 'Georgia', serif;
 }
 
@@ -56,23 +58,23 @@ h2 {
 
 .info-section div, .personal-info div {
     margin: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Tamaño de fuente reducido para mejor visualización en móviles */
 }
 
 .calendar {
-    margin-top: 2rem;
+    margin-top: 1rem; /* Margen reducido para mejor ajuste en móviles */
 }
 
 .calendar h3 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
     color: #8b4513;
 }
 
 .calendar table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
 }
 
 .calendar th, .calendar td {
@@ -92,8 +94,8 @@ h2 {
 }
 
 .photo {
-    width: 250px;
-    height: 250px;
+    width: 150px; /* Tamaño reducido */
+    height: 150px; /* Tamaño reducido */
     border-radius: 80%;
     object-fit: cover;
     position: relative;
@@ -111,20 +113,19 @@ h2 {
 }
 
 .loader img {
-    width: 300px;
+    width: 200px; /* Tamaño reducido */
     height: auto;
     margin-bottom: 20px;
 }
 
 .progress-bar {
     position: fixed;
-    top: calc(50% + 100px); /* Ajusta la posición vertical para que esté debajo del gif y del texto */
+    top: calc(50% + 50px); /* Ajuste de posición para pantallas pequeñas */
     left: 50%; /* Posición horizontal centrada */
     transform: translateX(-50%); /* Centrar horizontalmente */
-    width: 100vw; /* Ancho del 100% de la ventana */
+    width: 90vw; /* Ancho del 90% de la ventana */
     max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
     padding: 20px; /* Espacio interno */
-    /*background: rgba(139, 69, 19, 0.9);  Color marrón vintage con un 90% de opacidad */
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -141,7 +142,7 @@ h2 {
 
 .loading-text {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
     color: #8b4513;
     animation: blinking 1s infinite;
     text-align: center;
@@ -180,3 +181,48 @@ button:hover {
     background-color: darkblue; /* Cambio de color al pasar el cursor */
 }
 
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 1rem; /* Reducir padding en pantallas pequeñas */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Ajuste para que ocupen el 100% en pantallas pequeñas */
+        margin-bottom: 1rem; /* Añadido margen inferior para separación */
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño de fuente reducido */
+    }
+
+    .info-section div, .personal-info div {
+        font-size: 1rem; /* Tamaño de fuente reducido */
+    }
+
+    .calendar h3 {
+        font-size: 1.5rem; /* Tamaño de fuente reducido */
+    }
+
+    .calendar table {
+        font-size: 0.9rem; /* Tamaño de fuente reducido */
+    }
+
+    .photo {
+        width: 150px; /* Tamaño reducido */
+        height: 150px; /* Tamaño reducido */
+    }
+
+    .progress-bar {
+        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+        width: 90vw; /* Ancho del 90% de la ventana */
+    }
+
+    .loading-text {
+        font-size: 1.2rem; /* Tamaño de fuente reducido */
+    }
+
+    .loader img {
+        width: 200px; /* Tamaño reducido */
+    }
+}
