@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #3c3c3c;
+    background: linear-gradient(200deg, #aaa4a7, #8b4513c0);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-content {
+    display: none; /* Se mostrará después de cargar */
+    width: 80%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-section, .right-section {
+    width: 48%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
+}
+
+.info-section {
+    margin: 1rem 0;
+}
+
+.info-section div, .personal-info div {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.calendar {
+    margin-top: 2rem;
+}
+
+.calendar h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #8b4513;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.calendar th {
+    background-color: #f4f4f4;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 80%;
+    object-fit: cover;
+    position: relative;
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.9); /* Fondo difuminado */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    position: fixed;
+    top: calc(50% + 100px); /* Ajusta la posición vertical para que esté debajo del gif y del texto */
+    left: 50%; /* Posición horizontal centrada */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    width: 100vw; /* Ancho del 100% de la ventana */
+    max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
+    padding: 20px; /* Espacio interno */
+    /*background: rgba(139, 69, 19, 0.9);  Color marrón vintage con un 90% de opacidad */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.progress {
+    width: 0;
+    height: 10px;
+    background-color: #f1f0ef;
+    transition: width 0.5s;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #8b4513;
+    animation: blinking 1s infinite;
+    text-align: center;
+}
+
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.logo-img {
+    width: auto; /* Ancho automático para ocupar el espacio disponible */
+    height: 75px;
+    border-radius: 15px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    position: relative;
+}
+
+button {
+    display: block; /* Hacer que el botón sea un bloque para centrarlo */
+    margin: auto; /* Centrar horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: rgba(0, 0, 255, 0.507); /* Color de fondo */
+    color: #f1f0ef; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor al pasar */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: darkblue; /* Cambio de color al pasar el cursor */
+}
+

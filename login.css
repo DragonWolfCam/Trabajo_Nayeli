@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #3c3c3c;
+    background: linear-gradient(200deg, #aaa4a7, #8b4513c0); 
+    background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.contenedor {
+    position: relative;
+    width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo {
+    margin-bottom: 1rem;
+}
+
+.logo-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+}
+
+h2 {
+    font-size: 2.3rem;
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
+}
+
+.input-contenedor {
+    position: relative;
+    margin: 30px 0;
+    width: 100%;
+    border-bottom: 2px solid #000; /* Cambiar el color y grosor de la línea */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo más intenso */
+}
+
+
+.input-contenedor label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #8b4513;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .6s;
+    font-weight: bold;
+}
+
+.input-contenedor input:focus ~ label,
+.input-contenedor input:valid ~ label {
+    top: -5px;
+}
+
+.input-contenedor input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px 0;
+    color: #8b4513;
+}
+
+.input-contenedor i {
+    position: absolute;
+    color: #8b4513;
+    font-size: 1.6rem;
+    top: 19px;
+    right: 8px;
+}
+
+.olvidar {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #8b4513;
+    display: flex;
+    justify-content: center;
+}
+
+.olvidar label input {
+    margin: 3px;
+}
+
+.olvidar label a {
+    color: #8b4513;
+    text-decoration: none;
+    transition: .3s;
+    font-size: .9em;
+}
+
+.olvidar label a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: #8b4513;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+    color: #fff;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+.registrar {
+    font-size: .8rem;
+    color: #8b4513;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.registrar p a {
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}

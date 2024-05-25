@@ -1,0 +1,143 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #0f0f0f;
+    background: linear-gradient(200deg, #aaa4a7, #b651a0c0);
+    background-attachment: fixed;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    width: calc(50% - 2rem);
+    margin: 0 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #76628d, #474fb9);
+    box-shadow: 0 2px 4px rgb(110, 107, 107);
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 20%;
+    width: 75%;
+    height: auto;
+    margin-top: auto;
+    color: #122172;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-contenedor {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.input-contenedor input,
+.input-contenedor select {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 5px 0;
+    color: #f7f2f2;
+    border-bottom: 1px solid #1a0a5f;
+}
+
+.input-contenedor input:focus ~ label,
+.input-contenedor input:valid ~ label,
+.input-contenedor select:focus ~ label,
+.input-contenedor select:valid ~ label {
+    transform: translateY(-150%) scale(0.8);
+    color: #080808;
+}
+
+.input-contenedor label {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    color: #eef0ee;
+    font-size: 2rem;
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+button {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    background: linear-gradient(to right, #1fec3a, #104401);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 40px;
+    color: #fff;
+    margin-top: .5rem;
+    position: static;
+}
+
+/* Modificaciones para el campo de correo electrónico */
+.input-contenedor.correo {
+    width: calc(100% - 100%);
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.input-contenedor.correo input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: auto;
+    padding: 5px 0;
+    color: #f7f2f2;
+    border-bottom: 1px solid #1a0a5f;
+}
+
+.input-contenedor.correo input:focus ~ label,
+.input-contenedor.correo input:valid ~ label {
+    transform: translateY(-150%) scale(0.8);
+    color: #080808;
+}
+
+.input-contenedor.correo label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #eef0ee;
+    font-size: auto;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.button-container p {
+    color: #0f0f0f;
+}
+.button-container a {
+    color: #fdfcfc;
+    
+}
+
+.button-container a:hover {
+    color: #b80606; /* Cambio de color al pasar el cursor */
+}

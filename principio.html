@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio Restaurante Vintage</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"  href="principio.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader">
+            <img src="carga.gif" alt="Cargando...">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-text">CARGANDO...</div>
+        </div>
+    </div>
+
+    <div id="main-content" class="d-none">
+        <!-- Contenedor de Navegación -->
+        <div class="nav-container">
+            <a class="navbar-brand" href="#"><img src="fondo.jpg" alt="Logo" class="logo-img" width="75px" height="75px"></a>
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#" class="nav-link"><i class="fas fa-utensils"></i> Menú</a>
+            <a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i> Reservaciones</a>
+            <a href="#" class="nav-link"><i class="fas fa-map-marker-alt"></i> Locales</a>
+            <a href="#" class="nav-link"><i class="fas fa-calendar-day"></i> Eventos</a>
+        </div>
+        
+
+        <!-- Información del Restaurante -->
+        <div class="info-restaurante">
+            <h2>Bienvenido a <b>THE SKYLIN</b></h2>
+            <p>Disfruta de una experiencia única con la mejor comida y ambiente de automoviles retro.</p>
+            <p><b>TÚ OPINION NOS IMPORTA!!😁</b></p>
+        </div>
+
+        <!-- Contenedor de reseñas -->
+        <div class="container reviews-container">
+            <h2>Reseñas</h2>
+            <!-- Aquí se mostrarán las reseñas -->
+            <div class="review">
+                <div class="author">Nombre del autor</div>
+                <div class="rating">★★★★★</div>
+                <div class="content">
+                    CALIFICANOS!!
+                </div>
+            </div>
+
+            <!-- Formulario de agregación de reseñas -->
+            <form id="review-form">
+                <div class="mb-3">
+                    <label for="author" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="author" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Calificación</label>
+                    <input type="number" class="form-control" id="rating" min="1" max="5" required>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Reseña</label>
+                    <textarea class="form-control" id="content" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+          setTimeout(function() {
+              $('#loading-screen').fadeOut('slow', function() {
+                  $('#main-content').removeClass('d-none');
+              });
+          }, 5000);
+      
+          var progress = 0;
+          var interval = setInterval(function() {
+              progress += 1;
+              $('.progress').css('width', progress + '%');
+              if (progress >= 100) clearInterval(interval);
+          }, 50);
+      });
+    </script>
+</body>
+</html>

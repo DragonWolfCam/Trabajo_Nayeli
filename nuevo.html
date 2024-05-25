@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="nuevo.css">
+</head>
+<body>
+    <section>
+        <div class="contenedor">
+            <h2>Registro de Usuario</h2>
+            <form>
+                <div class="input-contenedor">
+                    <input type="text" id="nombre" required>
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="apellido-paterno" required>
+                    <label for="apellido-paterno">Apellido Paterno</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="apellido-materno" required>
+                    <label for="apellido-materno">Apellido Materno</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="direccion" required>
+                    <label for="direccion">Dirección</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="area-cocina" required>
+                    <label for="area-cocina">Área de Cocina</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="numero-empleado" required>
+                    <label for="numero-empleado">Número de Empleado</label>
+                </div>
+            </form>
+        </div>
+        <div class="contenedor">
+            <form>
+                <div class="input-contenedor">
+                    <select id="ciudad" required>
+                        <option value="" disabled selected>Selecciona Ciudad</option>
+                        <option value="ciudad1">Ciudad 1</option>
+                        <option value="ciudad2">Ciudad 2</option>
+                        <option value="ciudad3">Ciudad 3</option>
+                        <option value="ciudad4">Ciudad 4</option>
+                        <option value="ciudad5">Ciudad 5</option>
+                    </select>
+                    <label for="ciudad">Ciudad</label>
+                </div>
+                <div class="input-contenedor">
+                    <select id="pais" required>
+                        <option value="" disabled selected>Selecciona País</option>
+                        <option value="pais1">País 1</option>
+                        <option value="pais2">País 2</option>
+                        <option value="pais3">País 3</option>
+                        <option value="pais4">País 4</option>
+                        <option value="pais5">País 5</option>
+                    </select>
+                    <label for="pais">País</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="number" id="edad" required>
+                    <label for="edad">Edad</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="codigo-postal" required>
+                    <label for="codigo-postal">Código Postal</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="text" id="estado-civil" required>
+                    <label for="estado-civil">Estado Civil</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="tel" id="telefono" required>
+                    <label for="telefono">Teléfono</label>
+                </div>
+                <div class="input-contenedor">
+                    <input type="email" id="correo" required>
+                    <label for="correo">Correo Electrónico</label>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

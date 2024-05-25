@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="empleados.css">
+    <title>Información del Empleado</title>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader">
+            <img src="carga.gif" alt="Cargando...">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-text">CARGANDO...</div>
+        </div>
+    </div>
+    
+    <section id="main-content" class="d-none">
+        <div class="contenedor">
+            <div class="left-section">
+                <h2>Información del Empleado</h2>
+                <div class="info-section">
+                    <div><strong>Equipo:</strong> Nombre del equipo</div>
+                    <div><strong>Turno:</strong> Nombre del turno</div>
+                    <div><strong>Restaurante:</strong> Nombre del restaurante</div>
+                    <div><strong>Hora de Entrada:</strong> 09:00 AM</div>
+                    <div><strong>Hora de Salida:</strong> 05:00 PM</div>
+                </div>
+                <div class="calendar">
+                    <h3>Calendario de Cobertura</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Evento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 de Mayo</td>
+                                <td>Evento 1</td>
+                            </tr>
+                            <tr>
+                                <td>2 de Mayo</td>
+                                <td>Evento 2</td>
+                            </tr>
+                            <tr>
+                                <td>3 de Mayo</td>
+                                <td>Evento 3</td>
+                            </tr>
+                            <!-- Añadir más filas según sea necesario -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="photo-container">
+                    <img src="empleado.jpg" alt="Foto del Empleado" class="photo">
+                </div>
+                <div class="personal-info">
+                    <div><strong>Nombre:</strong> Luis Alfredo</div>
+                    <div><strong>Edad:</strong> 22 años</div>
+                    <div><strong>Correo:</strong> luis.camacho@camacho.com</div>
+                    <div><strong>Teléfono:</strong> +123 456 7890</div>
+                    <div><strong>Puesto:</strong> Chef</div>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="login.html">
+                    <button type="submit" class="btn btn-primary">Regresar</button>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'flex';
+            }, 5000);
+        
+            var progress = 0;
+            var interval = setInterval(function() {
+                progress += 1;
+                document.querySelector('.progress').style.width = progress + '%';
+                if (progress >= 100) clearInterval(interval);
+            }, 50);
+        });
+    </script>
+</body>
+</html>
