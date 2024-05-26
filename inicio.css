@@ -164,8 +164,8 @@ body {
 
 /* Estilo para las imágenes del carrusel en dispositivos de pantalla grande */
 .carousel-item img {
-    width: 75px; /* Ancho fijo de 75px */
-    height: 75px; /* Altura fija de 75px */
+    width: 300px; /* Ancho fijo de 300px */
+    height: auto; /* Altura automática para mantener la proporción */
     border-radius: 15px; /* Borde redondeado */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
 }
@@ -198,42 +198,40 @@ body {
 
     .container-vintage {
         width: 90%;
-        padding: 
+        padding: 10px;
+    }
 
-10px;
-}
+    .text-vintage {
+        font-size: 1rem;
+    }
 
-.text-vintage {
-    font-size: 1rem;
-}
+    .title-vintage {
+        font-size: 1.5rem;
+    }
 
-.title-vintage {
-    font-size: 1.5rem;
-}
+    .paragraph-vintage {
+        font-size: 1rem;
+    }
 
-.paragraph-vintage {
-    font-size: 1rem;
-}
+    .progress-bar {
+        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+    }
 
-.progress-bar {
-    top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
-}
+    .loading-text {
+        font-size: 1.2rem;
+    }
 
-.loading-text {
-    font-size: 1.2rem;
-}
+    .loader img {
+        width: 200px;
+    }
 
-.loader img {
-    width: 200px;
-}
-
-/* Estilo para las imágenes del carrusel en dispositivos móviles */
-.carousel-item img {
-    width: auto; /* Ancho automático para adaptarse al contenedor */
-    max-width: 100%; /* Ancho máximo del 100% */
-    height: auto; /* Altura automática para mantener la relación de aspecto */
-    max-height: 75px;
-    border-radius: 15px; /* Borde redondeado */
-    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
-}
+    /* Estilo para las imágenes del carrusel en dispositivos móviles */
+    .carousel-item img {
+        width: 100%; /* Ancho del 100% del contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+        max-width: 300px; /* Ancho máximo de 300px */
+        max-height: 200px; /* Altura máxima de 200px */
+        border-radius: 15px; /* Borde redondeado */
+        object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    }
 }
