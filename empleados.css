@@ -193,7 +193,7 @@ button:hover {
 
     h2 {
         font-size: auto; /* Tamaño de fuente reducido para dispositivos móviles */
-        margin-bottom: 1rem; /* Ajuste del margen inferior */
+        margin-bottom: auto; /* Ajuste del margen inferior */
     }
 
     .info-section div, .personal-info div {
