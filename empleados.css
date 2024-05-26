@@ -192,7 +192,7 @@ button:hover {
     }
 
     h2 {
-        font-size: 2rem; /* Tamaño de fuente reducido para dispositivos móviles */
+        font-size: auto; /* Tamaño de fuente reducido para dispositivos móviles */
         margin-bottom: 1rem; /* Ajuste del margen inferior */
     }
 
