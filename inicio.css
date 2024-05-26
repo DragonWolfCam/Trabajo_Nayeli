@@ -222,7 +222,7 @@ body {
     }
 
     .loader img {
-        width: 200px;
+        width: 100px;
     }
 
     /* Estilo para las imágenes del carrusel en dispositivos móviles */
@@ -230,7 +230,7 @@ body {
         width: 100%; /* Ancho del 100% del contenedor */
         height: auto; /* Altura automática para mantener la proporción */
         max-width: 300px; /* Ancho máximo de 300px */
-        max-height: 200px; /* Altura máxima de 200px */
+        max-height: 100px; /* Altura máxima de 200px */
         border-radius: 15px; /* Borde redondeado */
         object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
     }
