@@ -193,7 +193,7 @@ button:hover {
     }
 
     h2 {
-        font-size: 2rem; /* Tamaño de fuente reducido */
+        font-size: 1.5rem; /* Tamaño de fuente reducido */
     }
 
     .info-section div, .personal-info div {
@@ -201,7 +201,7 @@ button:hover {
     }
 
     .calendar h3 {
-        font-size: 1.5rem; /* Tamaño de fuente reducido */
+        font-size: 1.2rem; /* Tamaño de fuente reducido */
     }
 
     .calendar table {
@@ -209,8 +209,8 @@ button:hover {
     }
 
     .photo {
-        width: 150px; /* Tamaño reducido */
-        height: 150px; /* Tamaño reducido */
+        width: 100px; /* Tamaño reducido */
+        height: 100px; /* Tamaño reducido */
     }
 
     .progress-bar {
@@ -219,10 +219,10 @@ button:hover {
     }
 
     .loading-text {
-        font-size: 1.2rem; /* Tamaño de fuente reducido */
+        font-size: 1rem; /* Tamaño de fuente reducido */
     }
 
     .loader img {
-        width: 200px; /* Tamaño reducido */
+        width: 100px; /* Tamaño reducido */
     }
 }

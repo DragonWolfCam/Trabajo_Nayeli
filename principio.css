@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Estilos generales */
 * {
     font-family: 'Poppins', sans-serif;
@@ -111,6 +113,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .loader img {
@@ -267,5 +270,12 @@ body {
     .loader img {
         width: 100px;
     }
-    
+}
+
+/* Media Queries adicionales para asegurar que las imágenes se vean bien en dispositivos móviles */
+@media (max-width: 576px) {
+    .carousel-item img {
+        max-width: 150px; /* Ancho máximo de 150px en pantallas más pequeñas */
+        max-height: 60px; /* Altura máxima de 60px en pantallas más pequeñas */
+    }
 }
