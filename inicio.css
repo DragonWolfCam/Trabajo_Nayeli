@@ -40,8 +40,7 @@ body {
 }
 
 .nav-link {
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #8b4513; /* Color marrón vintage */
     text-decoration: none;
     border-radius: 15px;
@@ -49,9 +48,8 @@ body {
 
 .nav-link i {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
-    border-radius: 55px;
 }
 
 .nav-link:hover {
@@ -89,20 +87,20 @@ body {
 
 /* Estilo vintage para texto */
 .text-vintage {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #8b4513; /* Color marrón vintage */
 }
 
 /* Estilo vintage para títulos */
 .title-vintage {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #8b4513; /* Color marrón vintage */
     margin-bottom: 10px;
 }
 
 /* Estilo vintage para párrafos */
 .paragraph-vintage {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #3c3c3c; /* Color de texto oscuro */
     margin-bottom: 20px;
 }
