@@ -33,7 +33,8 @@ body {
     width: 100%;
     z-index: 100; /* Asegura que esté por encima del contenido principal */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #f7f7f7; /* Color de fondo claro */
 }
@@ -197,7 +198,8 @@ body {
     }
 
     .title-vintage {
-        font-size: 1.5rem;
+        font-size: 
+        1.5rem;
     }
 
     .paragraph-vintage {
