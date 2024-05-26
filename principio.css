@@ -112,34 +112,30 @@ body {
 }
 
 .loader img {
-    width: 200px;
+    width: 300px;
     height: auto;
     margin-bottom: 20px;
 }
 
 .progress-bar {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 10px;
-    background: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress {
-    width: 0;
-    height: 100%;
-    background: #8b4513; /* Color marrón vintage */
-    transition: width 0.5s;
+    position: fixed;
+    top: calc(50% + 100px); /* Ajusta la posición vertical para que esté debajo del gif y del texto */
+    left: 50%; /* Posición horizontal centrada */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    width: 100vw; /* Ancho del 100% de la ventana */
+    max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
+    padding: 20px; /* Espacio interno */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .loading-text {
-    margin-top: 11px;
-    font-size: 1.2rem;
-    color: #fff;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #8b4513;
     animation: blinking 1s infinite;
     text-align: center;
 }
@@ -151,9 +147,11 @@ body {
 }
 
 .logo-img {
-    height: 50px;
+    width: auto; /* Ancho automático para ocupar el espacio disponible */
+    height: 75px;
     border-radius: 15px; /* Borde redondeado */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    position: relative;
 }
 
 /* Estilos para las reseñas */
@@ -233,21 +231,21 @@ body {
     }
 
     .loader img {
-        width: 150px;
+        width: 100px;
     }
 
     .loading-text {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .progress-bar {
-        width: 90%;
+        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
     }
 
     .progress {
         width: 0;
         height: 100%;
-        background: #8b4513; /* Color marrón vintage */
+        background: #faf9f8d7; /* Color marrón vintage */
         transition: width 0.5s;
     }
 }

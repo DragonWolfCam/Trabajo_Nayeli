@@ -228,10 +228,27 @@ body {
     /* Estilo para las imágenes del carrusel en dispositivos móviles */
     .carousel-item img {
         width: 100%; /* Ancho del 100% del contenedor */
-        height: auto; /* Altura automática para mantener la proporción */
         max-width: 300px; /* Ancho máximo de 300px */
-        max-height: 100px; /* Altura máxima de 200px */
+        height: auto; /* Altura automática para mantener la proporción */
+        max-height: 100px; /* Altura máxima de 100px */
         border-radius: 15px; /* Borde redondeado */
         object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
     }
+    
+    /* Media queries para asegurar que las imágenes se vean bien en dispositivos móviles */
+    @media (max-width: 768px) {
+        .carousel-item img {
+            max-width: 200px; /* Ancho máximo de 200px en pantallas más pequeñas */
+            max-height: 80px; /* Altura máxima de 80px en pantallas más pequeñas */
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .carousel-item img {
+            max-width: 150px; /* Ancho máximo de 150px en pantallas más pequeñas */
+            max-height: 60px; /* Altura máxima de 60px en pantallas más pequeñas */
+        }
+    }
+    
 }
