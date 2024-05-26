@@ -31,10 +31,10 @@ body {
     width: 100%;
     z-index: 100; /* Asegura que esté por encima del contenido principal */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #f7f7f7; /* Color de fondo claro */
-    
 }
 
 .nav-link {
@@ -132,7 +132,7 @@ body {
     width: 100vw; /* Ancho del 100% de la ventana */
     max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
     padding: 20px; /* Espacio interno */
-    /*background: rgba(139, 69, 19, 0.9);  Color marrón vintage con un 90% de opacidad */
+    background: rgba(139, 69, 19, 0.9); /* Color marrón vintage con un 90% de opacidad */
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -229,4 +229,3 @@ body {
 #review-form button {
     width: 100%;
 }
-

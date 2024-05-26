@@ -231,7 +231,7 @@ body {
 .carousel-item img {
     width: auto; /* Ancho automático para adaptarse al contenedor */
     max-width: 100%; /* Ancho máximo del 100% */
-    height: auto; /* Altura automática para mantener la relación de aspecto */
+    height: 75%; /* Altura automática para mantener la relación de aspecto */
     border-radius: 15px; /* Borde redondeado */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
 }
