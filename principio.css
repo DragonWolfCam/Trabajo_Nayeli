@@ -213,15 +213,22 @@ body {
     width: 100%;
 }
 
-/* Media queries para dispositivos móviles */
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .navbar {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
         padding: 10px;
     }
 
     .nav-link {
         font-size: 1rem;
-        padding: 5px;
+        margin: 10px 0;
+    }
+
+    .info-restaurante {
+        margin-top: 120px; /* Ajuste para dejar espacio suficiente para la barra de navegación en móviles */
+        padding: 10px;
     }
 
     .info-restaurante h2 {
@@ -229,56 +236,36 @@ body {
     }
 
     .info-restaurante p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
-    .loader img {
-        width: 100px;
+    .container-vintage {
+        width: 90%;
+        padding: 10px;
     }
 
-    .loading-text {
-        font-size: 1.2rem;
+    .text-vintage {
+        font-size: 1rem;
+    }
+
+    .title-vintage {
+        font-size: 1.5rem;
+    }
+
+    .paragraph-vintage {
+        font-size: 1rem;
     }
 
     .progress-bar {
         top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
     }
 
-    .progress {
-        width: 0;
-        height: 100%;
-        background: #faf9f8d7; /* Color marrón vintage */
-        transition: width 0.5s;
-    }
-}
-
-@media (max-width: 576px) {
-    .navbar {
-        padding: 5px;
-    }
-
-    .nav-link {
-        font-size: 0.8rem;
-        padding: 3px;
-    }
-
-    .info-restaurante h2 {
+    .loading-text {
         font-size: 1.2rem;
-    }
-
-    .info-restaurante p {
-        font-size: 0.8rem;
     }
 
     .loader img {
         width: 100px;
     }
-
-    .loading-text {
-        font-size: 0.8rem;
-    }
-
-    .progress-bar {
-        width: 95%;
-    }
+    
 }
