@@ -23,14 +23,13 @@ body {
     width: 80%;
     max-width: 1200px;
     justify-content: space-between;
-    flex-wrap: wrap; /* Añadido para permitir el ajuste de contenido en pantallas pequeñas */
 }
 
 .contenedor {
     position: relative;
     width: 100%;
     display: flex;
-    flex-direction: column; /* Cambio para apilar secciones verticalmente en pantallas pequeñas */
+    justify-content: space-between;
     border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     backdrop-filter: blur(15px);
@@ -40,28 +39,14 @@ body {
 }
 
 .left-section, .right-section {
-    width: 100%; /* Ajuste para que ocupen el 100% en pantallas pequeñas */
-    margin-bottom: 1rem; /* Añadido margen inferior para separación */
-}
-
-.left-section h2 {
-    font-size: 1.8rem; /* Tamaño de fuente para dispositivos de escritorio */
-    margin-bottom: 1rem; /* Margen inferior */
-    text-align: center; /* Centrar el texto */
-    color: #8b4513; /* Color del texto */
-}
-
-.info-section div {
-    font-size: 1rem; /* Tamaño de fuente */
-    margin-bottom: 0.5rem; /* Margen inferior */
-    color: #3c3c3c; /* Color del texto */
+    width: 48%;
 }
 
 h2 {
-    font-size: 2.5rem; /* Ajuste del tamaño del h2 para dispositivos de escritorio */
+    font-size: 2.5rem;
     color: #8b4513;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-family: 'Georgia', serif;
 }
 
@@ -71,23 +56,23 @@ h2 {
 
 .info-section div, .personal-info div {
     margin: 0.5rem 0;
-    font-size: 1.2rem; /* Tamaño de fuente aumentado para mejor visualización */
+    font-size: 1.2rem;
 }
 
 .calendar {
-    margin-top: 1rem; /* Margen reducido para mejor ajuste en móviles */
+    margin-top: 2rem;
 }
 
 .calendar h3 {
     text-align: center;
-    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    font-size: 1.8rem;
     color: #8b4513;
 }
 
 .calendar table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1rem; /* Tamaño de fuente aumentado para mejor visualización */
+    font-size: 1rem;
 }
 
 .calendar th, .calendar td {
@@ -107,9 +92,9 @@ h2 {
 }
 
 .photo {
-    width: 200px; /* Ajuste del tamaño de la foto para dispositivos de escritorio */
-    height: 200px; /* Ajuste del tamaño de la foto para dispositivos de escritorio */
-    border-radius: 50%; /* Hacer la foto redonda */
+    width: 250px;
+    height: 250px;
+    border-radius: 80%;
     object-fit: cover;
     position: relative;
 }
@@ -126,19 +111,20 @@ h2 {
 }
 
 .loader img {
-    width: 200px; /* Tamaño reducido */
+    width: 300px;
     height: auto;
     margin-bottom: 20px;
 }
 
 .progress-bar {
     position: fixed;
-    top: calc(50% + 50px); /* Ajuste de posición para pantallas pequeñas */
+    top: calc(50% + 100px); /* Ajusta la posición vertical para que esté debajo del gif y del texto */
     left: 50%; /* Posición horizontal centrada */
     transform: translateX(-50%); /* Centrar horizontalmente */
-    width: 90vw; /* Ancho del 90% de la ventana */
+    width: 100vw; /* Ancho del 100% de la ventana */
     max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
     padding: 20px; /* Espacio interno */
+    /*background: rgba(139, 69, 19, 0.9);  Color marrón vintage con un 90% de opacidad */
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -155,7 +141,7 @@ h2 {
 
 .loading-text {
     margin-top: 10px;
-    font-size: 1.2rem; /* Tamaño de fuente reducido */
+    font-size: 1.5rem;
     color: #8b4513;
     animation: blinking 1s infinite;
     text-align: center;
