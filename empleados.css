@@ -183,45 +183,54 @@ button:hover {
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .contenedor {
-        padding: 1rem; /* Reducir padding en pantallas pequeñas */
+        flex-direction: column; /* Cambiar a diseño de columna */
+        align-items: center; /* Centrar elementos horizontalmente */
+        padding: 1rem; /* Reducir padding */
     }
 
     .left-section, .right-section {
-        width: 100%; /* Ajuste para que ocupen el 100% en pantallas peque
+        width: 100%; /* Ocupar todo el ancho */
+        margin-bottom: 1rem; /* Añadir espacio entre secciones */
     }
 
     h2 {
-        font-size: 2rem; /* Tamaño de fuente reducido para dispositivos móviles */
-        margin-bottom: 1rem; /* Ajuste del margen inferior */
+        font-size: 2rem; /* Reducir tamaño del título */
+        margin-bottom: 1rem; /* Añadir espacio inferior */
+        text-align: center; /* Centrar el título */
     }
 
-    .info-section div, .personal-info div {
-        font-size: 1rem; /* Tamaño de fuente reducido */
+    .info-section div {
+        margin: 0.5rem 0; /* Reducir espacio entre elementos */
+        font-size: 1rem; /* Reducir tamaño del texto */
     }
 
     .calendar h3 {
-        font-size: 1.2rem; /* Tamaño de fuente reducido */
+        font-size: 1.2rem; /* Reducir tamaño del título del calendario */
     }
 
     .calendar table {
-        font-size: 0.8rem; /* Tamaño de fuente reducido */
+        font-size: 0.8rem; /* Reducir tamaño del texto en la tabla */
     }
 
     .photo {
-        width: 150px; /* Tamaño reducido para dispositivos móviles */
-        height: 150px; /* Tamaño reducido para dispositivos móviles */
+        width: 150px; /* Reducir tamaño de la foto */
+        height: 150px; /* Reducir tamaño de la foto */
+    }
+
+    button {
+        width: 100%; /* Ocupar todo el ancho disponible */
     }
 
     .progress-bar {
-        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+        top: calc(50% + 50px); /* Ajustar posición vertical */
         width: 90vw; /* Ancho del 90% de la ventana */
     }
 
     .loading-text {
-        font-size: 1rem; /* Tamaño de fuente reducido */
+        font-size: 1rem; /* Reducir tamaño de texto de carga */
     }
 
     .loader img {
-        width: 100px; /* Tamaño reducido para dispositivos móviles */
+        width: 100px; /* Reducir tamaño de la imagen de carga */
     }
 }
