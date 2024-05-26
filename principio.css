@@ -12,8 +12,6 @@ body {
     background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
     font-family: 'Courier New', Courier, monospace;
     color: #3c3c3c;
-    margin: 0; /* Eliminar el margen predeterminado */
-    padding: 0; /* Eliminar el relleno predeterminado */
 }
 
 /* Estilos específicos para el contenido principal */
@@ -24,32 +22,28 @@ body {
 }
 
 /* Estilos específicos para la barra de navegación */
-.nav-container {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100; /* Asegura que esté por encima del contenido principal */
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #f7f7f7; /* Color de fondo claro */
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .nav-link {
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #8b4513; /* Color marrón vintage */
     text-decoration: none;
-    border-radius: 15px;
+    padding: 5px 10px;
 }
 
 .nav-link i {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
-    border-radius: 55px;
 }
 
 .nav-link:hover {
@@ -61,21 +55,20 @@ body {
     text-align: center;
     padding: 20px;
     background-color: #f7f7f7; /* Color de fondo claro */
-    margin-top: 100px; /* Agregado para dejar espacio para la barra de navegación */
+    margin-top: 60px; /* Ajusta para dejar espacio para la barra de navegación */
     border-radius: 10px;
 }
 
 .info-restaurante h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #8b4513; /* Color marrón vintage */
     margin-bottom: 10px;
 }
 
 .info-restaurante p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #3c3c3c; /* Color de texto oscuro */
 }
-
 
 /* Estilo vintage para contenedores */
 .container-vintage {
@@ -88,20 +81,20 @@ body {
 
 /* Estilo vintage para texto */
 .text-vintage {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #8b4513; /* Color marrón vintage */
 }
 
 /* Estilo vintage para títulos */
 .title-vintage {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #8b4513; /* Color marrón vintage */
     margin-bottom: 10px;
 }
 
 /* Estilo vintage para párrafos */
 .paragraph-vintage {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #3c3c3c; /* Color de texto oscuro */
     margin-bottom: 20px;
 }
@@ -119,31 +112,34 @@ body {
 }
 
 .loader img {
-    width: 300px;
+    width: 200px;
     height: auto;
     margin-bottom: 20px;
 }
 
 .progress-bar {
-    position: fixed;
-    top: calc(50% + 100px); /* Ajusta la posición vertical para que esté debajo del gif y del texto */
-    left: 50%; /* Posición horizontal centrada */
-    transform: translateX(-50%); /* Centrar horizontalmente */
-    width: 100vw; /* Ancho del 100% de la ventana */
-    max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
-    padding: 20px; /* Espacio interno */
-    /*background: rgba(139, 69, 19, 0.9);  Color marrón vintage con un 90% de opacidad */
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background: #8b4513; /* Color marrón vintage */
+    transition: width 0.5s;
 }
 
 .loading-text {
     margin-top: 11px;
-    font-size: 1.5rem;
-    color: #8b4513;
+    font-size: 1.2rem;
+    color: #fff;
     animation: blinking 1s infinite;
     text-align: center;
 }
@@ -155,11 +151,9 @@ body {
 }
 
 .logo-img {
-    width: auto; /* Ancho automático para ocupar el espacio disponible */
-    height: 75px;
+    height: 50px;
     border-radius: 15px; /* Borde redondeado */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
-    position: relative;
 }
 
 /* Estilos para las reseñas */
@@ -200,13 +194,6 @@ body {
     padding: 20px;
 }
 
-.review {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
 .review .author {
     font-weight: bold;
     margin-bottom: 5px;
@@ -214,10 +201,6 @@ body {
 
 .review .rating {
     color: #ffd700; /* Color amarillo para las estrellas */
-}
-
-#review-form {
-    margin-top: 30px;
 }
 
 #review-form textarea,
@@ -228,4 +211,74 @@ body {
 
 #review-form button {
     width: 100%;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .info-restaurante h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-restaurante p {
+        font-size: 0.9rem;
+    }
+
+    .loader img {
+        width: 150px;
+    }
+
+    .loading-text {
+        font-size: 1rem;
+    }
+
+    .progress-bar {
+        width: 90%;
+    }
+
+    .progress {
+        width: 0;
+        height: 100%;
+        background: #8b4513; /* Color marrón vintage */
+        transition: width 0.5s;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 3px;
+    }
+
+    .info-restaurante h2 {
+        font-size: 1.2rem;
+    }
+
+    .info-restaurante p {
+        font-size: 0.8rem;
+    }
+
+    .loader img {
+        width: 100px;
+    }
+
+    .loading-text {
+        font-size: 0.8rem;
+    }
+
+    .progress-bar {
+        width: 95%;
+    }
 }
