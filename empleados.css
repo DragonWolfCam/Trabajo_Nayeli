@@ -36,6 +36,7 @@ body {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
 }
 
 .left-section, .right-section {
@@ -43,10 +44,10 @@ body {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Tamaño reducido para dispositivos móviles */
     color: #8b4513;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Ajuste del margen inferior */
     font-family: 'Georgia', serif;
 }
 
@@ -183,54 +184,55 @@ button:hover {
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .contenedor {
-        flex-direction: column; /* Cambiar a diseño de columna */
-        align-items: center; /* Centrar elementos horizontalmente */
-        padding: 1rem; /* Reducir padding */
+        padding: 1rem; /* Reducir padding en pantallas pequeñas */
     }
 
     .left-section, .right-section {
-        width: 100%; /* Ocupar todo el ancho */
-        margin-bottom: 1rem; /* Añadir espacio entre secciones */
+        width: 100%; /* Ajuste para que ocupen el 100% en pantallas pequeñas */
     }
 
     h2 {
-        font-size: 2rem; /* Reducir tamaño del título */
-        margin-bottom: 1rem; /* Añadir espacio inferior */
-        text-align: center; /* Centrar el título */
+        font-size: 2rem; /* Tamaño de fuente reducido para dispositivos móviles */
+        margin-bottom: 1rem; /* Ajuste del margen inferior */
     }
 
-    .info-section div {
-        margin: 0.5rem 0; /* Reducir espacio entre elementos */
-        font-size: 1rem; /* Reducir tamaño del texto */
+    .info-section div, .personal-info div {
+        font-size: 1rem; /* Tamaño de fuente reducido */
     }
 
     .calendar h3 {
-        font-size: 1.2rem; /* Reducir tamaño del título del calendario */
+        font-size: 1.2rem; /* Tamaño de fuente reducido */
     }
 
     .calendar table {
-        font-size: 0.8rem; /* Reducir tamaño del texto en la tabla */
-    }
+        font-size: 0.8rem; /* Tamaño de
+0.8rem; /* Tamaño de fuente reducido */
+}
 
-    .photo {
-        width: 150px; /* Reducir tamaño de la foto */
-        height: 150px; /* Reducir tamaño de la foto */
-    }
+.photo {
+    width: 150px; /* Tamaño reducido para dispositivos móviles */
+    height: 150px; /* Tamaño reducido para dispositivos móviles */
+}
 
-    button {
-        width: 100%; /* Ocupar todo el ancho disponible */
-    }
+.progress-bar {
+    top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+    width: 90vw; /* Ancho del 90% de la ventana */
+}
 
-    .progress-bar {
-        top: calc(50% + 50px); /* Ajustar posición vertical */
-        width: 90vw; /* Ancho del 90% de la ventana */
-    }
+.loading-text {
+    font-size: 1rem; /* Tamaño de fuente reducido */
+}
 
-    .loading-text {
-        font-size: 1rem; /* Reducir tamaño de texto de carga */
-    }
+.loader img {
+    width: 100px; /* Tamaño reducido para dispositivos móviles */
+}
 
-    .loader img {
-        width: 100px; /* Reducir tamaño de la imagen de carga */
-    }
+.button-container {
+    width: 100%; /* Ajuste para ocupar el 100% del contenedor padre */
+    text-align: center; /* Centrar el contenido */
+}
+
+.button-container button {
+    margin-top: 20px; /* Espacio superior entre el contenido anterior y el botón */
+}
 }
