@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #0f0f0f;
-    background: linear-gradient(200deg, #aaa4a7, #b651a0c0);
+    background: linear-gradient(200deg, #aaa4a7, #8b4513c0);
     background-attachment: fixed;
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to right, #76628d, #474fb9);
+    background: linear-gradient(200deg, #aaa4a7, #8b4513c0);
     box-shadow: 0 2px 4px rgb(110, 107, 107);
     border-radius: 10px;
 }
