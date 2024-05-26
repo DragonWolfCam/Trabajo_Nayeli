@@ -132,7 +132,6 @@ body {
     width: 100vw; /* Ancho del 100% de la ventana */
     max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
     padding: 20px; /* Espacio interno */
-    background: rgba(139, 69, 19, 0.9); /* Color marrón vintage con un 90% de opacidad */
     z-index: 1000;
     display: flex;
     justify-content: center;
