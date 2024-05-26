@@ -45,7 +45,7 @@ body {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Ajuste del tamaño del h2 para dispositivos de escritorio */
     color: #8b4513;
     text-align: center;
     margin-bottom: 1rem;
@@ -58,7 +58,7 @@ h2 {
 
 .info-section div, .personal-info div {
     margin: 0.5rem 0;
-    font-size: 1rem; /* Tamaño de fuente reducido para mejor visualización en móviles */
+    font-size: 1.2rem; /* Tamaño de fuente aumentado para mejor visualización */
 }
 
 .calendar {
@@ -74,7 +74,7 @@ h2 {
 .calendar table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    font-size: 1rem; /* Tamaño de fuente aumentado para mejor visualización */
 }
 
 .calendar th, .calendar td {
@@ -94,9 +94,9 @@ h2 {
 }
 
 .photo {
-    width: 150px; /* Tamaño reducido */
-    height: 150px; /* Tamaño reducido */
-    border-radius: 80%;
+    width: 200px; /* Ajuste del tamaño de la foto para dispositivos de escritorio */
+    height: 200px; /* Ajuste del tamaño de la foto para dispositivos de escritorio */
+    border-radius: 50%; /* Hacer la foto redonda */
     object-fit: cover;
     position: relative;
 }
@@ -188,12 +188,12 @@ button:hover {
     }
 
     .left-section, .right-section {
-        width: 100%; /* Ajuste para que ocupen el 100% en pantallas pequeñas */
-        margin-bottom: 1rem; /* Añadido margen inferior para separación */
+        width: 100%; /* Ajuste para que ocupen el 100% en pantallas peque
     }
 
     h2 {
-        font-size: 1.5rem; /* Tamaño de fuente reducido */
+        font-size: 2rem; /* Tamaño de fuente reducido para dispositivos móviles */
+        margin-bottom: 1rem; /* Ajuste del margen inferior */
     }
 
     .info-section div, .personal-info div {
@@ -205,12 +205,12 @@ button:hover {
     }
 
     .calendar table {
-        font-size: 0.9rem; /* Tamaño de fuente reducido */
+        font-size: 0.8rem; /* Tamaño de fuente reducido */
     }
 
     .photo {
-        width: 100px; /* Tamaño reducido */
-        height: 100px; /* Tamaño reducido */
+        width: 150px; /* Tamaño reducido para dispositivos móviles */
+        height: 150px; /* Tamaño reducido para dispositivos móviles */
     }
 
     .progress-bar {
@@ -223,6 +223,6 @@ button:hover {
     }
 
     .loader img {
-        width: 100px; /* Tamaño reducido */
+        width: 100px; /* Tamaño reducido para dispositivos móviles */
     }
 }
