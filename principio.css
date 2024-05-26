@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Estilos generales */
 * {
     font-family: 'Poppins', sans-serif;
@@ -156,7 +158,8 @@ body {
 .logo-img {
     width: auto; /* Ancho automático para ocupar el espacio disponible */
     height: 75px;
-    border-radius: 15px; /* Borde redondeado */
+    border-radius
+    : 15px; /* Borde redondeado */
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
     position: relative;
 }
@@ -193,41 +196,6 @@ body {
     width: 100%;
 }
 
-/* Estilos para las reseñas */
-.reviews-container {
-    margin-top: 50px;
-    padding: 20px;
-}
-
-.review {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.review .author {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.review .rating {
-    color: #ffd700; /* Color amarillo para las estrellas */
-}
-
-#review-form {
-    margin-top: 30px;
-}
-
-#review-form textarea,
-#review-form input[type="number"] {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#review-form button {
-    width: 100%;
-}
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .nav-container {
@@ -256,32 +224,30 @@ body {
 
     .container-vintage {
         width: 90%;
-        padding: 
+        padding: 10px;
+    }
 
-10px;
-}
+    .text-vintage {
+        font-size: 1rem;
+    }
 
-.text-vintage {
-    font-size: 1rem;
-}
+    .title-vintage {
+        font-size: 1.5rem;
+    }
 
-.title-vintage {
-    font-size: 1.5rem;
-}
+    .paragraph-vintage {
+        font-size: 1rem;
+    }
 
-.paragraph-vintage {
-    font-size: 1rem;
-}
+    .progress-bar {
+        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+    }
 
-.progress-bar {
-    top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
-}
+    .loading-text {
+        font-size: 1.2rem;
+    }
 
-.loading-text {
-    font-size: 1.2rem;
-}
-
-.loader img {
-    width: 200px;
-}
+    .loader img {
+        width: 200px;
+    }
 }
