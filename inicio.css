@@ -162,6 +162,14 @@ body {
     position: relative;
 }
 
+/* Estilo para las imágenes del carrusel en dispositivos de pantalla grande */
+.carousel-item img {
+    width: 75px; /* Ancho fijo de 75px */
+    height: 75px; /* Altura fija de 75px */
+    border-radius: 15px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+}
+
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .nav-container {
@@ -190,31 +198,41 @@ body {
 
     .container-vintage {
         width: 90%;
-        padding: 10px;
-    }
+        padding: 
 
-    .text-vintage {
-        font-size: 1rem;
-    }
+10px;
+}
 
-    .title-vintage {
-        font-size: 
-        1.5rem;
-    }
+.text-vintage {
+    font-size: 1rem;
+}
 
-    .paragraph-vintage {
-        font-size: 1rem;
-    }
+.title-vintage {
+    font-size: 1.5rem;
+}
 
-    .progress-bar {
-        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
-    }
+.paragraph-vintage {
+    font-size: 1rem;
+}
 
-    .loading-text {
-        font-size: 1.2rem;
-    }
+.progress-bar {
+    top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+}
 
-    .loader img {
-        width: 200px;
-    }
+.loading-text {
+    font-size: 1.2rem;
+}
+
+.loader img {
+    width: 200px;
+}
+
+/* Estilo para las imágenes del carrusel en dispositivos móviles */
+.carousel-item img {
+    width: auto; /* Ancho automático para adaptarse al contenedor */
+    max-width: 100%; /* Ancho máximo del 100% */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    border-radius: 15px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+}
 }

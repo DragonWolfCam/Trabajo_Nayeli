@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Estilos generales */
 * {
     font-family: 'Poppins', sans-serif;
@@ -31,10 +33,10 @@ body {
     width: 100%;
     z-index: 100; /* Asegura que esté por encima del contenido principal */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #f7f7f7; /* Color de fondo claro */
-    
 }
 
 .nav-link {
@@ -75,7 +77,6 @@ body {
     font-size: 1.2rem;
     color: #3c3c3c; /* Color de texto oscuro */
 }
-
 
 /* Estilo vintage para contenedores */
 .container-vintage {
@@ -132,7 +133,6 @@ body {
     width: 100vw; /* Ancho del 100% de la ventana */
     max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
     padding: 20px; /* Espacio interno */
-    /*background: rgba(139, 69, 19, 0.9);  Color marrón vintage con un 90% de opacidad */
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -162,71 +162,76 @@ body {
     position: relative;
 }
 
-/* Estilos para las reseñas */
-.review {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
+/* Estilo para las imágenes del carrusel en dispositivos de pantalla grande */
+.carousel-item img {
+    width: 75px; /* Ancho fijo de 75px */
+    height: 75px; /* Altura fija de 75px */
+    border-radius: 15px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
 }
 
-.review .author {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
 
-.review .rating {
-    color: #ffd700; /* Color amarillo para las estrellas */
-}
+    .nav-link {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
 
-/* Estilos para el formulario de agregación de reseñas */
-#review-form {
-    margin-top: 30px;
-}
+    .info-restaurante {
+        margin-top: 120px; /* Ajuste para dejar espacio suficiente para la barra de navegación en móviles */
+        padding: 10px;
+    }
 
-#review-form textarea,
-#review-form input[type="number"] {
-    width: 100%;
-    margin-bottom: 10px;
-}
+    .info-restaurante h2 {
+        font-size: 1.5rem;
+    }
 
-#review-form button {
-    width: 100%;
-}
+    .info-restaurante p {
+        font-size: 1rem;
+    }
 
-/* Estilos para las reseñas */
-.reviews-container {
-    margin-top: 50px;
-    padding: 20px;
-}
+    .container-vintage {
+        width: 90%;
+        padding: 
+        10px;
+    }
 
-.review {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
+    .text-vintage {
+        font-size: 1rem;
+    }
 
-.review .author {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+    .title-vintage {
+        font-size: 1.5rem;
+    }
 
-.review .rating {
-    color: #ffd700; /* Color amarillo para las estrellas */
-}
+    .paragraph-vintage {
+        font-size: 1rem;
+    }
 
-#review-form {
-    margin-top: 30px;
-}
+    .progress-bar {
+        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+    }
 
-#review-form textarea,
-#review-form input[type="number"] {
-    width: 100%;
-    margin-bottom: 10px;
-}
+    .loading-text {
+        font-size: 1.2rem;
+    }
 
-#review-form button {
-    width: 100%;
-}
+    .loader img {
+        width: 200px;
+    }
 
+    /* Estilo para las imágenes del carrusel en dispositivos móviles */
+    .carousel-item img {
+        width: auto; /* Ancho automático para adaptarse al contenedor */
+        max-width: 100%; /* Ancho máximo del 100% */
+        height: auto; /* Altura automática para mantener la relación de aspecto */
+        border-radius: 15px; /* Borde redondeado */
+        object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    }
+}
