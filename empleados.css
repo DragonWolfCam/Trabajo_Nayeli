@@ -44,6 +44,19 @@ body {
     margin-bottom: 1rem; /* Añadido margen inferior para separación */
 }
 
+.left-section h2 {
+    font-size: 1.8rem; /* Tamaño de fuente para dispositivos de escritorio */
+    margin-bottom: 1rem; /* Margen inferior */
+    text-align: center; /* Centrar el texto */
+    color: #8b4513; /* Color del texto */
+}
+
+.info-section div {
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-bottom: 0.5rem; /* Margen inferior */
+    color: #3c3c3c; /* Color del texto */
+}
+
 h2 {
     font-size: 2.5rem; /* Ajuste del tamaño del h2 para dispositivos de escritorio */
     color: #8b4513;
