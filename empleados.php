@@ -8,6 +8,15 @@ $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
+} else {
+    echo "Conexión exitosa a la base de datos.";
+}
+
+$conn->close();
+?>
+
+/*if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
 $data = json_decode(file_get_contents('php://input'), true);
@@ -50,4 +59,4 @@ if ($empleadoResult->num_rows > 0) {
 }
 
 $conn->close();
-?>
+?>*/
