@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Entradas y Salidas</title>
+</head>
+<body>
+    <h1>Registro de Entradas y Salidas</h1>
+    <input type="text" id="codigoQR" placeholder="Escanea tu código QR">
+    <button onclick="registrarHora()">Registrar Hora</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function registrarHora() {
+            const codigoQR = document.getElementById('codigoQR').value;
+            fetch('registrar.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ codigoQR: codigoQR })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('mensaje').innerText = data.mensaje;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
