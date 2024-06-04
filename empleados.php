@@ -1,4 +1,35 @@
 <?php
+require_once 'vendor/autoload.php'; // Reemplaza la ruta con la ubicación correcta del autoload.php de Composer
+
+use Endroid\QrCode\QrCode;
+
+// Función para generar el código QR y guardarlo en un archivo
+function generarCodigoQR($texto, $nombreArchivo) {
+    $qrCode = new QrCode($texto);
+    $qrCode->setSize(300);
+
+    // Guardar el código QR en un archivo
+    $qrCode->writeFile($nombreArchivo);
+}
+
+// Array de empleados con sus nombres y códigos QR
+$empleados = [
+    ['nombre' => 'Luis Alfredo Camacho', 'codigo_qr' => 'qr_luis_camacho'],
+    ['nombre' => 'Pedro Vergara', 'codigo_qr' => 'qr_pedro_vergara'],
+    ['nombre' => 'Alejandro Jaramillo', 'codigo_qr' => 'qr_alejandro_jaramillo'],
+    ['nombre' => 'Pedro Mendoza', 'codigo_qr' => 'qr_pedro_mendoza'],
+    ['nombre' => 'Ana Christa Vega', 'codigo_qr' => 'qr_ana_vega']
+];
+
+// Directorio donde se guardarán los códigos QR
+$directorioQR = 'qr_codes/';
+
+// Generar y guardar los códigos QR para cada empleado
+foreach ($empleados as $empleado) {
+    $nombreArchivo = $directorioQR . $empleado['codigo_qr'] . '.png';
+    generarCodigoQR($empleado['nombre'], $nombreArchivo);
+}
+
 // Conectar a la base de datos
 $host = 'localhost'; // Cambia esto según tu configuración
 $db = 'empleadosDB';
