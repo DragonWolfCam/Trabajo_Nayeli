@@ -4,22 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Entradas y Salidas</title>
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+    <style>
+        #scanner-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Registro de Entradas y Salidas</h1>
-    <input type="text" id="codigoQR" placeholder="Escanea tu código QR">
-    <button onclick="registrarHora()">Registrar Hora</button>
+    <div id="scanner-container"></div>
     <p id="mensaje"></p>
     
     <script>
-        function registrarHora() {
-            const codigoQR = document.getElementById('codigoQR').value;
+        Quagga.init({
+            inputStream: {
+                name: "Live",
+                type: "LiveStream",
+                target: document.querySelector("#scanner-container"),
+                constraints: {
+                    width: 640,
+                    height: 480,
+                    facingMode: "environment"
+                }
+            },
+            decoder: {
+                readers: ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader", "code_39_vin_reader", "codabar_reader", "upc_reader", "upc_e_reader", "i2of5_reader", "2of5_reader", "code_93_reader"]
+            }
+        }, function(err) {
+            if (err) {
+                console.error("Error al iniciar Quagga: ", err);
+                return;
+            }
+            console.log("Quagga iniciado correctamente");
+            Quagga.start();
+        });
+
+        Quagga.onDetected(function(result) {
+            const codigoQR = result.codeResult.code;
+            registrarHora(codigoQR);
+        });
+
+        function registrarHora(codigoQR) {
             fetch('empleados.php', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: JSON.stringify({ codigoQR: codigoQR })
+                body: 'codigoQR=' + encodeURIComponent(codigoQR)
             })
             .then(response => response.json())
             .then(data => {
