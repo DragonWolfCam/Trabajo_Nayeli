@@ -75,5 +75,5 @@ app.get('/consultar-reserva', (req, res) => {
 app.use(express.static('public'));
 
 app.listen(port, () => {
-    console.log(Servidor escuchando en http://localhost:${port});
+    console.log(`Servidor escuchando en http://localhost:${port}`);
 });
