@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+.evento-img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Esto asegurará que la imagen cubra el espacio sin distorsionarse */
+}
+
 /* Estilo del fondo vintage */
 body {
     background: linear-gradient(200deg, #f3e7e9, #ced3dc); /* Degradado de colores */

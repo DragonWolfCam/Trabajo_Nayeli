@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Restaurante Vintage</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="inicio.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader">
+            <img src="carga.gif" alt="Cargando...">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-text">CARGANDO EVENTOS...</div>
+        </div>
+    </div>
+
+    <div id="main-content" class="d-none">
+        <!-- Contenedor de Navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="login.html"><img src="fondo.jpg" alt="Logo" class="logo-img" width="75px" height="75px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-utensils"></i> Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-calendar-alt"></i> Reservaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-map-marker-alt"></i> Locales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-calendar-day"></i> Eventos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Información de Eventos -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Eventos Especiales</h2>
+            <h2 class="text-center mb-4">Eventos Especiales</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="evento1.jpg" class="card-img-top img-fluid evento-img" alt="Evento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Noche de Jazz</h5>
+                            <p class="card-text">Únete a nosotros para una noche de jazz en vivo .</p>
+                            <p class="card-text"><small id="fecha-evento-1" class="text-muted">Fecha: </small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="evento2.jpg" class="card-img-top img-fluid evento-img" alt="Evento 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cata de Vinos</h5>
+                            <p class="card-text">Descubre nuevos sabores y aromas con nuestra cata de vinos exclusiva.</p>
+                            <p class="card-text"><small id="fecha-evento-2" class="text-muted">Fecha: </small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="evento3.jpg" class="card-img-top img-fluid evento-img" alt="Evento 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Clase de Cocina Italiana</h5>
+                            <p class="card-text">Aprende a cocinar auténticos platos italianos con nuestro chef invitado.</p>
+                            <p class="card-text"><small id="fecha-evento-3" class="text-muted">Fecha: </small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="evento4.jpg" class="card-img-top img-fluid evento-img" alt="Evento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Noche de Salsa</h5>
+                            <p class="card-text">Baila al ritmo de la salsa con nuestra banda en vivo .</p>
+                            <p class="card-text"><small id="fecha-evento-4" class="text-muted">Fecha: </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('#loading-screen').fadeOut('slow', function() {
+                    $('#main-content').removeClass('d-none');
+                });
+            }, 5000);
+
+            var progress = 0;
+            var interval = setInterval(function() {
+                progress += 1;
+                $('.progress').css('width', progress + '%');
+                if (progress >= 100) clearInterval(interval);
+            }, 50);
+
+            // Función para calcular fechas futuras
+            function setFutureDate(id, daysToAdd) {
+                var today = new Date();
+                var futureDate = new Date(today);
+                futureDate.setDate(today.getDate() + daysToAdd);
+
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                var formattedDate = futureDate.toLocaleDateString('es-ES', options);
+
+                document.getElementById(id).innerText = 'Fecha: ' + formattedDate;
+            }
+
+            // Establecer fechas para los eventos
+            setFutureDate('fecha-evento-1', 5); // 5 días en el futuro
+            setFutureDate('fecha-evento-2', 12); // 12 días en el futuro
+            setFutureDate('fecha-evento-3', 19); // 19 días en el futuro
+            setFutureDate('fecha-evento-4', 26); // 26 días en el futuro
+        });
+    </script>
+</body>
+</html>
