@@ -7,7 +7,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+.reservation {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e9ecef;
+}
 
+.reservation h1 {
+    font-size: 3em;
+    color: #555;
+}
+
+.reservation p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+
+
+.confirmation-card, .reservation-info {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+}
+
+/* Estilos para el formulario */
+.form-group label {
+color: #8b4513; /* Color marrón vintage para las etiquetas */
+font-weight: bold;
+}
+
+.form-control {
+border: 1px solid #ccc; /* Borde suave */
+border-radius: 8px;
+transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.form-control:focus {
+border-color: #8b4513; /* Borde resaltado al enfocar */
+}
+
+.btn-primary {
+background-color: #8b4513; /* Botón con el color marrón vintage */
+border-color: #8b4513;
+color: #fff;
+transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.btn-primary:hover {
+background-color: #7a3d0d; /* Cambio de color al pasar el cursor */
+border-color: #7a3d0d;
+}
+
+/* Estilos para los mensajes de confirmación */
+.confirmation-card {
+background-color: #f8f8f8; /* Fondo gris claro para el mensaje de confirmación */
+border: 2px solid #8b4513; /* Borde marrón vintage */
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.confirmation-card h2 {
+color: #8b4513; /* Título con color marrón vintage */
+}
+
+.confirmation-card p {
+color: #333; /* Texto oscuro */
+}
 .evento-img {
     width: 100%;
     height: 200px; /* Ajusta la altura según tus necesidades */
