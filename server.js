@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 // Ruta para la página principal
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Trabajo_Nayeli/reservacionesindex.html');
+    res.sendFile(__dirname + '/reservacionesindex.html');
 });
 
 // Ruta para realizar una nueva reserva
