@@ -9,6 +9,47 @@
     <link rel="stylesheet"  href="inicio.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
+<style>
+    /*** ESTILOS BOTÓN GROW SPIN ***/
+    .ov-btn-grow-spin {
+                background: #fff; /* color de fondo */
+                color: #4741d7; /* color de fuente */
+                border: 2px solid #4741d7; /* tamaño y color de borde */
+                padding: 10px 15px;
+                border-radius: 3px; /* redondear bordes */
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                display: inline-block;
+                text-decoration: none;
+                font-size: 1em; /* tamaño de fuente */
+                margin: 5px; /* margen entre botones */
+                transition: color 0.3s ease, background-color 0.3s ease;
+            }
+            .ov-btn-grow-spin:hover {
+                color: #fff; /* color de fuente hover */
+                background: #4741d7; /* color de fondo hover */
+            }
+            .ov-btn-grow-spin::after {
+                content: "";
+                background: #4741d7; /* color de fondo hover */
+                position: absolute;
+                z-index: -1;
+                padding: 10px 15px;
+                display: block;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                transform: scale(0, 0) rotate(-180deg);
+                transition: all 0.3s ease;
+            }
+            .ov-btn-grow-spin:hover::after {
+                transition: all 0.3s ease-out;
+                transform: scale(1, 1) rotate(0deg);
+            }
+</style>
 <body>
     <div id="loading-screen">
         <div class="loader">
@@ -34,7 +75,7 @@
                             <a class="nav-link" href="principio.html"><i class="fas fa-home"></i> Reseñas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=""><i class="fas fa-utensils"></i> Menú</a>
+                            <a class="nav-link" href="menu.html"><i class="fas fa-utensils"></i> Menú</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="reservcionesindex.html"><i class="fas fa-calendar-alt"></i> Reservaciones</a>
