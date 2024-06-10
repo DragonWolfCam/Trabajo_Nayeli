@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilos generales */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.reservation {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e9ecef;
+}
+
+.reservation h1 {
+    font-size: 3em;
+    color: #555;
+}
+
+.reservation p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+
+
+.confirmation-card, .reservation-info {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+}
+
+/* Estilos para el formulario */
+.form-group label {
+color: #8b4513; /* Color marrón vintage para las etiquetas */
+font-weight: bold;
+}
+
+.form-control {
+border: 1px solid #ccc; /* Borde suave */
+border-radius: 8px;
+transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.form-control:focus {
+border-color: #8b4513; /* Borde resaltado al enfocar */
+}
+
+.btn-primary {
+background-color: #8b4513; /* Botón con el color marrón vintage */
+border-color: #8b4513;
+color: #fff;
+transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.btn-primary:hover {
+background-color: #7a3d0d; /* Cambio de color al pasar el cursor */
+border-color: #7a3d0d;
+}
+
+/* Estilos para los mensajes de confirmación */
+.confirmation-card {
+background-color: #f8f8f8; /* Fondo gris claro para el mensaje de confirmación */
+border: 2px solid #8b4513; /* Borde marrón vintage */
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.confirmation-card h2 {
+color: #8b4513; /* Título con color marrón vintage */
+}
+
+.confirmation-card p {
+color: #333; /* Texto oscuro */
+}
+.evento-img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Esto asegurará que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilo del fondo vintage */
+body {
+    background: linear-gradient(200deg, #f3e7e9, #ced3dc); /* Degradado de colores */
+    background-attachment: fixed; /* Para que el fondo se quede fijo al hacer scroll */
+    font-family: 'Courier New', Courier, monospace;
+    color: #3c3c3c;
+    margin: 0; /* Eliminar el margen predeterminado */
+    padding: 0; /* Eliminar el relleno predeterminado */
+}
+
+/* Estilos específicos para el contenido principal */
+#main-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* Estilos específicos para la barra de navegación */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Asegura que esté por encima del contenido principal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Color de fondo claro */
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #8b4513; /* Color marrón vintage */
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.nav-link i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.nav-link:hover {
+    color: #3c3c3c; /* Color de texto oscuro */
+}
+
+/* Estilos específicos para la información del restaurante */
+.info-restaurante {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Color de fondo claro */
+    margin-top: 100px; /* Agregado para dejar espacio para la barra de navegación */
+    border-radius: 10px;
+}
+
+.info-restaurante h2 {
+    font-size: 2rem;
+    color: #8b4513; /* Color marrón vintage */
+    margin-bottom: 10px;
+}
+
+.info-restaurante p {
+    font-size: 1.2rem;
+    color: #3c3c3c; /* Color de texto oscuro */
+}
+
+/* Estilo vintage para contenedores */
+.container-vintage {
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo difuminado */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra vintage */
+}
+
+/* Estilo vintage para texto */
+.text-vintage {
+    font-size: 1rem;
+    color: #8b4513; /* Color marrón vintage */
+}
+
+/* Estilo vintage para títulos */
+.title-vintage {
+    font-size: 1.8rem;
+    color: #8b4513; /* Color marrón vintage */
+    margin-bottom: 10px;
+}
+
+/* Estilo vintage para párrafos */
+.paragraph-vintage {
+    font-size: 1rem;
+    color: #3c3c3c; /* Color de texto oscuro */
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para el loader */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.9); /* Fondo difuminado */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    position: fixed;
+    top: calc(50% + 100px); /* Ajusta la posición vertical para que esté debajo del gif y del texto */
+    left: 50%; /* Posición horizontal centrada */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    width: 100vw; /* Ancho del 100% de la ventana */
+    max-width: 80%; /* Ancho máximo del 80% del ancho de la ventana */
+    padding: 20px; /* Espacio interno */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #8b4513;
+    animation: blinking 1s infinite;
+    text-align: center;
+}
+
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.logo-img {
+    width: auto; /* Ancho automático para ocupar el espacio disponible */
+    height: 75px;
+    border-radius: 15px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    position: relative;
+}
+
+/* Estilo para las imágenes del carrusel en dispositivos de pantalla grande */
+.carousel-item img {
+    width: 300px; /* Ancho fijo de 300px */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 15px; /* Borde redondeado */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .info-restaurante {
+        margin-top: 120px; /* Ajuste para dejar espacio suficiente para la barra de navegación en móviles */
+        padding: 10px;
+    }
+
+    .info-restaurante h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-restaurante p {
+        font-size: 1rem;
+    }
+
+    .container-vintage {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .text-vintage {
+        font-size: 1rem;
+    }
+
+    .title-vintage {
+        font-size: 1.5rem;
+    }
+
+    .paragraph-vintage {
+        font-size: 1rem;
+    }
+
+    .progress-bar {
+        top: calc(50% + 50px); /* Ajuste para mejor visualización en pantallas pequeñas */
+    }
+
+    .loading-text {
+        font-size: 1.2rem;
+    }
+
+    .loader img {
+        width: 100px;
+    }
+
+    /* Estilo para las imágenes del carrusel en dispositivos móviles */
+    .carousel-item img {
+        width: 100%; /* Ancho del 100% del contenedor */
+        max-width: 300px; /* Ancho máximo de 300px */
+        height: auto; /* Altura automática para mantener la proporción */
+        max-height: 100px; /* Altura máxima de 100px */
+        border-radius: 15px; /* Borde redondeado */
+        object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+    
+    /* Media queries para asegurar que las imágenes se vean bien en dispositivos móviles */
+    @media (max-width: 768px) {
+        .carousel-item img {
+            max-width: 200px; /* Ancho máximo de 200px en pantallas más pequeñas */
+            max-height: 80px; /* Altura máxima de 80px en pantallas más pequeñas */
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .carousel-item img {
+            max-width: 150px; /* Ancho máximo de 150px en pantallas más pequeñas */
+            max-height: 60px; /* Altura máxima de 60px en pantallas más pequeñas */
+        }
+    }
+    
+}
