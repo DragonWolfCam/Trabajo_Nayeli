@@ -136,7 +136,11 @@
             </div>
         </div>
     </nav>
-
+ <!-- Información del Restaurante -->
+ <div class="info-restaurante">
+    <h2>Bienvenido a SKILINE</h2>
+    <p>Disfruta de una experiencia única con la mejor comida y ambiente retro.</p>
+</div>
     <!-- Cuadro de texto -->
     <div class="container my-4">
         <div class="alert custom-alert" role="alert">
@@ -182,12 +186,25 @@
         </div>
     </div>
 
-    <!-- Información del Restaurante -->
-    <div class="info-restaurante">
-        <h2>Bienvenido a Nuestro Restaurante Vintage</h2>
-        <p>Disfruta de una experiencia única con la mejor comida y ambiente retro.</p>
-    </div>
+     <!-- Importa las bibliotecas de JavaScript al final del body -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(function() {
+          setTimeout(function() {
+              $('#loading-screen').fadeOut('slow', function() {
+                  $('#main-content').removeClass('d-none');
+              });
+          }, 5000);
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcId"
+          var progress = 0;
+          var interval = setInterval(function() {
+              progress += 1;
+              $('.progress').css('width', progress + '%');
+              if (progress >= 100) clearInterval(interval);
+          }, 50);
+      });
+  </script>
+
+</body>
+</html>
